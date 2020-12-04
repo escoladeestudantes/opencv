@@ -1,0 +1,49 @@
+Método 01:
+https://github.com/opencv/opencv/tree/master/samples/dnn/face_detector
+
+Baixar arquivos weights.meta4, download_weights.py, deploy.prototxt e opencv_face_detector.pbtxt
+Abrir o arquivo no GitHub
+No canto direito clicar em Raw
+Na página que abrir clicar no botão secundário do mouse e Salvar Como
+
+Pelo terminal de comando, na pasta em que os arquivos estão, executar 
+python download_weights.py
+
+Dois arquivos são baixados:
+opencv_face_detector_uint8.pb
+res10_300x300_ssd_iter_140000_fp16.caffemodel
+
+Excluir o termo '.txt' do nome dos arquivos
+deploy.prototxt
+opencv_face_detector.pbtxt
+
+---------
+Método 02
+---------
+https://github.com/opencv/opencv/tree/master/samples/dnn/face_detector
+
+Baixar opencv_face_detector.pbtxt
+
+##Tensorflow
+arquivo = opencv_face_detector_uint8.pb
+url = https://raw.githubusercontent.com/opencv/opencv_3rdparty/dnn_samples_face_detector_20180220_uint8/opencv_face_detector_uint8.pb
+
+Referência: ProgrammerSought
+https://www.programmersought.com/article/24774823025/
+
+## Caffemodel
+arquivo = deploy.prototxt
+url  = https://github.com/opencv/opencv/raw/3.4.0/samples/dnn/face_detector/deploy.prototxt
+hash = 006BAF926232DF6F6332DEFB9C24F94BB9F3764E
+## Pesos
+arquivo = res10_300x300_ssd_iter_140000.caffemodel
+url  = https://github.com/opencv/opencv_3rdparty/raw/dnn_samples_face_detector_20170830/res10_300x300_ssd_iter_140000.caffemodel
+hash = 15aa726b4d46d9f023526d85537db81cbc8dd566
+tamanho = 10.1 MB
+
+Referência: Amro
+https://amroamroamro.github.io/mexopencv/opencv/dnn_face_detector.html
+
+Excluir o termo '.txt' do nome dos arquivos
+deploy.prototxt
+opencv_face_detector.pbtxt

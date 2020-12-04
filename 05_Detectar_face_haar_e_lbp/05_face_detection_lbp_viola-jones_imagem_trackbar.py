@@ -33,8 +33,8 @@ while True:
 		#Desenhar um retangulo
 		cv2.rectangle(imagem_copia,(x,y),(x+w,y+h),(0,0,255),2)
 	#Mostrar o resultado final
-	faces2 = face_detector2.detectMultiScale(gray, diminuicao, vizinhos)
 	#Para cada face encontrada
+	faces2 = face_detector2.detectMultiScale(gray, diminuicao, vizinhos)
 	for (x,y,w,h) in faces2:
 		#Desenhar um retangulo
 		cv2.rectangle(imagem_copia,(x,y),(x+w,y+h),(0,255,0),2)

@@ -8,7 +8,7 @@
 <h3>Treinamento</h3>
 <p>O comando para instalar a biblioteca PIL é: </p>
 <p>pip install pillow</p>
-<p>O classificador, de extensão yml, é salvo na pasta lbph_classificador. </p>
+<p>O classificador, de extensão yml, é salvo na pasta 'lbph_classificador'. </p>
 <p>Ele funciona no Mac, mas não na Raspberry Pi. </p>
 
 <h4>Referências</h4>

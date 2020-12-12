@@ -146,7 +146,7 @@ $ sudo ldconfig
 <p>P caminho descrito em <install path</> é utilizado agora: </p>
 
 ```
-$ ls -l /usr/local/lib/python3.5/site-packages/cv2/python-3.5
+$ ls -l /usr/local/lib/python3.6/site-packages/cv2/python-3.6
 ```
 
 <p> O terminal mostrará algo como: </p>
@@ -156,7 +156,7 @@ total 7392
 -rw-r--r- 1 root staff 7566984 dez 10 10:54 cv2.cpython-36m-x86_64-linux-gnu.so
 ```
 
-<p> Os comandos a seguir podem estar com o caminho incompleto, portanto procure por eles! O segundo corresponde ao arquivo mostrado pelo terminal no último comando. </p>
+<p> Os comandos a seguir podem estar com o caminho incompleto, portanto procure por eles! O segundo corresponde ao arquivo mostrado pelo terminal no último comando (/home/edee/.local/bin/.virtualenvs/opencv_cuda/lib/python3.6/site-packages) </p>
 
 ```
 $ cd ~/.local/bin/.virtualenvs/opencv_cuda/lib/python3.6/site-packages/

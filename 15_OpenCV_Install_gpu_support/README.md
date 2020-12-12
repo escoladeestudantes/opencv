@@ -66,6 +66,7 @@ source /usr/local/bin/virtualenvwrapper.sh
 ```
 $ source ~/.bashrc
 mkvirtualenv opencv_cuda -p python3
+pip install numpy
 ```
 
 <p>Ambiente virtual de nome <b>opencv_cuda</b> foi criado e nele serão instaladas as bibliotecas.</p>
@@ -82,6 +83,8 @@ mkvirtualenv opencv_cuda -p python3
 </ul>
 
 <h3>Passo #6 - Configurar OpenCV com suporte para GPU NVIDIA</h3>
+
+<p>Entrar no ambiente virtual criado <b>opencv_cuda</b> no qual numpy foi instalada.</p>
 
 ```
 $ cd ~/opencv

@@ -7,6 +7,7 @@
 <li>https://github.com/pjreddie/darknet/</li>
 <li>https://gilberttanner.com/blog/yolo-object-detection-with-opencv</li>
 <li>https://www.pyimagesearch.com/2018/11/12/yolo-object-detection-with-opencv/</li>
+<li>https://www.learnopencv.com/deep-learning-based-object-detection-using-yolov3-with-opencv-python-c/</li>
 </ul>
 
 

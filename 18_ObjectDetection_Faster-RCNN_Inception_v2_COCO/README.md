@@ -1,4 +1,6 @@
-<h4>OpenCV – Detecção de 80 classes de objetos com Faster R-CNN e Inception V2 treinado no COCO dataset</h4>
+<h4>OpenCV – Detecção de 91 classes de objetos com Faster R-CNN e Inception V2 treinado no COCO dataset</h4>
+
+<b>OpenCV DNN - TensorFlow Faster R-CNN - 0 ~ 90</b>
 
 <p>Referências: </p>
 

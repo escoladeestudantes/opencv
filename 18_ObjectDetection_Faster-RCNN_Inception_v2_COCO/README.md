@@ -5,10 +5,11 @@
 <p>Referências: </p>
 
 <ul>
-<li>https://programmersought.com/article/76361050166/</li>
 <li>https://junha1125.github.io/artificial-intelligence/2020-08-15-2OpenCVcode/</li>
+<li>https://programmersought.com/article/76361050166/</li>
 <li>https://github.com/opencv/opencv/wiki/TensorFlow-Object-Detection-API#run-network-in-opencv</li>
 <li>https://www.pyimagesearch.com/2017/09/11/object-detection-with-deep-learning-and-opencv/</li>
+<li>https://tech.amikelive.com/node-718/what-object-categories-labels-are-in-coco-dataset/</li>
 </ul>
 
 
@@ -20,5 +21,6 @@
 </ul>
 
 <p>e movê-los para a pasta contendo os códigos (extrair o primeiro e o arquivo que interessa é frozen_inference_graph.pb).</p>
+
 
 

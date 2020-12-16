@@ -1,7 +1,9 @@
 #Usar
-#python 01_ObjectDetection_YOLO_v3_Tiny_imagem.py
+#python 02_ObjectDetection_YOLO_v3_Tiny_COCO_imagens.py
 import numpy as np
 import cv2
+import glob
+import os
 
 def extract_boxes_confidences_classids(outputs, confidence, width, height):
     boxes = []
@@ -82,11 +84,13 @@ if (use_gpu == 1):
 layer_names = net.getLayerNames()
 layer_names = [layer_names[i[0] - 1] for i in net.getUnconnectedOutLayers()]
 
-imagem = cv2.imread('bus-3013054_1280.jpg')
-(h, w) = imagem.shape[:2]
-boxes, confidences, classIDs, idxs = make_prediction(net, layer_names, labels, imagem, 0.1, 0.3)
-frame = draw_bounding_boxes(imagem, boxes, confidences, classIDs, idxs, colors)
-cv2.imshow("Imagem", imagem)
-cv2.waitKey(0)
+path = ''
+for infile in glob.glob(os.path.join(path, '*.jpg')):
+	imagem = cv2.imread(infile)
+	(h, w) = imagem.shape[:2]
+	boxes, confidences, classIDs, idxs = make_prediction(net, layer_names, labels, imagem, 0.1, 0.3)
+	imagem = draw_bounding_boxes(imagem, boxes, confidences, classIDs, idxs, colors)
+	cv2.imshow("Imagem", imagem)
+	cv2.waitKey(0)
 cv2.destroyAllWindows()
 

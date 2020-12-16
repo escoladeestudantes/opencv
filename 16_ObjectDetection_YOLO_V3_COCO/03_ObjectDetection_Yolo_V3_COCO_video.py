@@ -1,5 +1,5 @@
 #Usar
-#python 01_ObjectDetection_Yolo_V3_imagem.py
+#python 03_ObjectDetection_Yolo_V3_COCO_video.py
 import numpy as np
 import cv2
 
@@ -82,11 +82,22 @@ if (use_gpu == 1):
 layer_names = net.getLayerNames()
 layer_names = [layer_names[i[0] - 1] for i in net.getUnconnectedOutLayers()]
 
-imagem = cv2.imread('bus-3013054_1280.jpg')
-(h, w) = imagem.shape[:2]
-boxes, confidences, classIDs, idxs = make_prediction(net, layer_names, labels, imagem, 0.1, 0.3)
-frame = draw_bounding_boxes(imagem, boxes, confidences, classIDs, idxs, colors)
-cv2.imshow("Imagem", imagem)
-cv2.waitKey(0)
+cap = cv2.VideoCapture('Bangkok-30945.mp4')
+#cap = cv2.VideoCapture('0')
+stop = 0
+
+while (True):
+	if(stop == 0):
+		ret, frame = cap.read()
+		if (ret == True):
+			(h, w) = frame.shape[:2]
+			boxes, confidences, classIDs, idxs = make_prediction(net, layer_names, labels, frame, 0.1, 0.3)
+			frame = draw_bounding_boxes(frame, boxes, confidences, classIDs, idxs, colors)
+			cv2.imshow("Frame", frame)
+	key = cv2.waitKey(1) & 0xFF
+	if key == ord('s'):
+		stop = not(stop)
+	if key == ord('q'):
+		break
 cv2.destroyAllWindows()
 

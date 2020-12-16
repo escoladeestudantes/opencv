@@ -1,7 +1,9 @@
 #Usar
-#python 03_ObjectDetection_YOLO_v3_Tiny_video.py
+#python 02_ObjectDetection_Yolo_V3_COCO_imagens.py
 import numpy as np
 import cv2
+import glob
+import os
 
 def extract_boxes_confidences_classids(outputs, confidence, width, height):
     boxes = []
@@ -71,9 +73,9 @@ labels = open('coco.names').read().strip().split('\n')
 colors = np.random.randint(0, 255, size=(len(labels), 3), dtype='uint8')
 
 # Carregar o modelo e os pesos
-net = cv2.dnn.readNetFromDarknet('yolov3-tiny.cfg', 'yolov3-tiny.weights')
+net = cv2.dnn.readNetFromDarknet('yolov3.cfg', 'yolov3.weights')
 
-use_gpu = 0
+use_gpu = 1
 if (use_gpu == 1):
     net.setPreferableBackend(cv2.dnn.DNN_BACKEND_CUDA)
     net.setPreferableTarget(cv2.dnn.DNN_TARGET_CUDA)
@@ -82,22 +84,13 @@ if (use_gpu == 1):
 layer_names = net.getLayerNames()
 layer_names = [layer_names[i[0] - 1] for i in net.getUnconnectedOutLayers()]
 
-cap = cv2.VideoCapture('Bangkok-30945.mp4')
-#cap = cv2.VideoCapture('0')
-stop = 0
-
-while (True):
-	if(stop == 0):
-		ret, frame = cap.read()
-		if (ret == True):
-			(h, w) = frame.shape[:2]
-			boxes, confidences, classIDs, idxs = make_prediction(net, layer_names, labels, frame, 0.1, 0.3)
-			frame = draw_bounding_boxes(frame, boxes, confidences, classIDs, idxs, colors)
-			cv2.imshow("Frame", frame)
-	key = cv2.waitKey(1) & 0xFF
-	if key == ord('s'):
-		stop = not(stop)
-	if key == ord('q'):
-		break
+path = ''
+for infile in glob.glob(os.path.join(path, '*.jpg')):
+	imagem = cv2.imread(infile)
+	(h, w) = imagem.shape[:2]
+	boxes, confidences, classIDs, idxs = make_prediction(net, layer_names, labels, imagem, 0.1, 0.3)
+	imagem = draw_bounding_boxes(imagem, boxes, confidences, classIDs, idxs, colors)
+	cv2.imshow("Imagem", imagem)
+	cv2.waitKey(0)
 cv2.destroyAllWindows()
 

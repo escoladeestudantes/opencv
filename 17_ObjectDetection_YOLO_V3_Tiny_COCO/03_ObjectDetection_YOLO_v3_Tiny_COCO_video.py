@@ -1,5 +1,5 @@
 #Usar
-#python 03_ObjectDetection_Yolo_V3_video.py
+#python 03_ObjectDetection_YOLO_v3_Tiny_COCO_video.py
 import numpy as np
 import cv2
 
@@ -71,9 +71,9 @@ labels = open('coco.names').read().strip().split('\n')
 colors = np.random.randint(0, 255, size=(len(labels), 3), dtype='uint8')
 
 # Carregar o modelo e os pesos
-net = cv2.dnn.readNetFromDarknet('yolov3.cfg', 'yolov3.weights')
+net = cv2.dnn.readNetFromDarknet('yolov3-tiny.cfg', 'yolov3-tiny.weights')
 
-use_gpu = 1
+use_gpu = 0
 if (use_gpu == 1):
     net.setPreferableBackend(cv2.dnn.DNN_BACKEND_CUDA)
     net.setPreferableTarget(cv2.dnn.DNN_TARGET_CUDA)

@@ -31,6 +31,21 @@ $ sudo apt-get install python3-dev
 
 <h3>Passo #3 - OpenCV</h3>
 
+<p><b>Instalar a versão 4.4.0 para não ocorrer erro com ssd_mobilenet_v3_large_coco_2020_01_14:</b></p>
+
+```
+$ cd ~
+$ wget -O opencv.zip https://github.com/opencv/opencv/archive/4.4.0.zip
+$ wget -O opencv_contrib.zip https://github.com/opencv/opencv_contrib/archive/4.4.0.zip
+$ unzip opencv.zip
+$ unzip opencv_contrib.zip
+$ mv opencv-4.4.0 opencv
+$ mv opencv_contrib-4.4.0 opencv_contrib
+```
+
+
+<p>Apresentado no vídeo:</p>
+
 ```
 $ cd ~
 $ wget -O opencv.zip https://github.com/opencv/opencv/archive/4.2.0.zip
@@ -143,7 +158,7 @@ make -j8
 $ sudo make install
 $ sudo ldconfig
 ```
-<p>P caminho descrito em <install path</> é utilizado agora: </p>
+<p>O caminho descrito em <install path</> é utilizado agora: </p>
 
 ```
 $ ls -l /usr/local/lib/python3.6/site-packages/cv2/python-3.6

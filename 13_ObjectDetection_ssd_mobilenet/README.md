@@ -53,4 +53,5 @@
 <ul>
   <li>https://www.pyimagesearch.com/2017/09/11/object-detection-with-deep-learning-and-opencv/ </li>
   <li>https://www.pyimagesearch.com/2017/11/06/deep-learning-opencvs-blobfromimage-works/ </li>
+  <li>https://github.com/opencv/opencv/tree/master/samples/dnn#object-detection</li>
 </ul>

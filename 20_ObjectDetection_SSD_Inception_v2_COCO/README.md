@@ -1,3 +1,5 @@
+<div style="text-align:center"><a href="https://www.youtube.com/watch?v=zGHKWqw9aUg"><img src="https://i.imgur.com/Gv8aPHF.jpg"/></a></div>
+
 <h4>OpenCV – Detecção de 91 classes de objetos com SSD e Inception v2 pré-treinado no COCO dataset</h4>
 
 <b>OpenCV DNN - TensorFlow SSD - 1 ~ 91</b>

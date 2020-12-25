@@ -1,4 +1,4 @@
-<div style="text-align:center"><a href="https://studio.youtube.com/video/FfaZQMh_tOE"><img src="https://i.imgur.com/142FrN0.jpg"/></a></div>
+<div style="text-align:center"><a href="https://www.youtube.com/watch?v=FfaZQMh_tOE"><img src="https://i.imgur.com/142FrN0.jpg"/></a></div>
 
 <h4>OpenCV – Detecção de 91 classes de objetos com Mask R-CNN e Inception v2 treinado no COCO dataset</h4>
 

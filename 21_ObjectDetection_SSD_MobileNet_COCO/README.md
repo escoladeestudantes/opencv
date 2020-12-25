@@ -1,3 +1,5 @@
+<div style="text-align:center"><a href="https://www.youtube.com/watch?v=VEq__AZqtCs"><img src="https://i.imgur.com/T1zhukc.jpg"/></a></div>
+
 <h4>OpenCV – Detecção de 91 classes de objetos com SSD e MobileNet v1 a v3 pré-treinados no COCO dataset</h4>
 
 <p>Instalar OpenCV >= 4.3.0 para executar os algoritmos (em especial ssd_mobilenet_v3_large_coco_2020_01_14). </p>

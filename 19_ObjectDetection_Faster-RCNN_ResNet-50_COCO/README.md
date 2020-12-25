@@ -1,3 +1,5 @@
+<div style="text-align:center"><a href="https://www.youtube.com/watch?v=H0RKMD31RfA"><img src="https://i.imgur.com/RVoUd8d.jpg"/></a></div>
+
 <h4>OpenCV – Detecção de 91 classes de objetos com Faster R-CNN e ResNet-50 treinado no COCO dataset</h4>
 
 <b>OpenCV DNN - TensorFlow Faster R-CNN - 0 ~ 90</b>
